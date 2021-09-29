@@ -55,7 +55,7 @@ module.exports = downloads = async(client,message) => {
                 try{
                     var usuarioTexto = body.slice(4).trim(), videoInfo = await api.obterInfoVideoYT(usuarioTexto)
                     if(videoInfo == null) return await client.reply(from,msgs_texto.downloads.yt.nao_encontrado,id)
-                    if(videoInfo.duration > 300000) return await client.reply(from,msgs_texto.downloads.yt.limite,id)
+                    if(videoInfo.duration > 900000) return await client.reply(from,msgs_texto.downloads.yt.limite,id)
                     var mensagemEspera = criarTexto(msgs_texto.downloads.yt.espera, videoInfo.title, videoInfo.durationFormatted)
                     await client.reply(from, mensagemEspera, id)
                 } catch(err){

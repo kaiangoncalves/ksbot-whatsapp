@@ -3,6 +3,7 @@
   "version": "1.16.3",
   "description": "Bot brasileiro para Whatsapp com diversas utilidades para o dia-a-dia.",
   "main": "app",
+  "start": "node index",
   "scripts": {
     "start": "node app.js",
     "test": "node test.js"
